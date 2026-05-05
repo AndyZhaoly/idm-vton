@@ -1,0 +1,36 @@
+name: idm
+channels:
+  - defaults
+dependencies:
+  - python=3.10
+  - pip
+  - pip:
+    # ── PyTorch：根据你的 CUDA 版本选一行，注释掉其他 ──────────────
+    # CUDA 12.1（稳定版，推荐优先尝试）
+    - torch==2.1.2+cu121 --index-url https://download.pytorch.org/whl/cu121
+    - torchvision==0.16.2+cu121 --index-url https://download.pytorch.org/whl/cu121
+    # CUDA 11.8
+    # - torch==2.1.2+cu118 --index-url https://download.pytorch.org/whl/cu118
+    # - torchvision==0.16.2+cu118 --index-url https://download.pytorch.org/whl/cu118
+    # CUDA 12.4
+    # - torch==2.3.0+cu124 --index-url https://download.pytorch.org/whl/cu124
+    # - torchvision==0.18.0+cu124 --index-url https://download.pytorch.org/whl/cu124
+    # ─────────────────────────────────────────────────────────────────
+    - diffusers==0.25.1
+    - transformers==4.36.2
+    - accelerate==0.25.0
+    - huggingface-hub==0.20.3
+    - onnxruntime==1.16.3
+    - opencv-python==4.8.1.78
+    - gradio==4.24.0
+    - einops==0.7.0
+    - numpy==1.26.4
+    - pillow==10.2.0
+    - scipy==1.11.4
+    - matplotlib==3.8.2
+    - tqdm==4.66.1
+    - pyyaml==6.0.1
+    - omegaconf==2.3.0
+    - basicsr==1.4.2
+    - fvcore==0.1.5.post20221221
+    - requests==2.31.0
